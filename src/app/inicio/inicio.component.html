@@ -1,0 +1,154 @@
+<div class="relative w-full overflow-hidden">
+  <!-- Imagen activa -->
+  <img
+    *ngIf="images[currentIndex]"
+    [src]="images[currentIndex]"
+    class="w-full h-[600px] object-cover"
+    alt="Imagen del Carrusel"
+  >
+
+  <!-- Indicadores -->
+  <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+    <div
+      *ngFor="let image of images; let i = index"
+      class="w-3 h-3 rounded-full transition-all duration-300"
+      [ngClass]="{
+        'bg-blue-500 scale-125': i === currentIndex,
+        'bg-gray-300 scale-100': i !== currentIndex
+      }"
+    ></div>
+  </div>
+</div>
+
+<section class="py-16 bg-white">
+  <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 grid grid-cols-1 md:grid-cols-2 items-center gap-12">
+    <!-- Ícono grande -->
+    <div class="flex justify-center">
+      <img src="/callcenter.png" alt="Ícono" class="w-64 md:w-80">
+    </div>
+
+    <!-- Texto y secciones -->
+    <div class="text-center md:text-left">
+      <h2 class="text-4xl md:text-5xl font-bold text-blue-700 mb-6">+5 AÑOS</h2>
+      <p class="text-gray-600 text-lg md:text-xl mb-10">
+        Proporcionando soluciones efectivas y personalizadas en servicio al cliente
+      </p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+        <!-- Bloque 1 -->
+        <div class="flex items-start space-x-4">
+          <div class="flex-shrink-0">
+            <div class="flex items-center justify-center border-4 border-blue-500 rounded-full h-20 w-20">
+              <img src="clientes.png" alt="Clientes" class="h-10 w-10">
+            </div>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-gray-800">Clientes</h3>
+            <p class="text-gray-600 text-sm">Centrados en el éxito de nuestros clientes</p>
+          </div>
+        </div>
+        <!-- Bloque 2 -->
+        <div class="flex items-start space-x-4">
+          <div class="flex-shrink-0">
+            <div class="flex items-center justify-center border-4 border-blue-500 rounded-full h-20 w-20">
+              <img src="tecnologia.png" alt="Tecnología" class="h-10 w-10">
+            </div>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-gray-800">Tecnología</h3>
+            <p class="text-gray-600 text-sm">Innovación en cada paso</p>
+          </div>
+        </div>
+        <!-- Bloque 3 -->
+        <div class="flex items-start space-x-4">
+          <div class="flex-shrink-0">
+            <div class="flex items-center justify-center border-4 border-blue-500 rounded-full h-20 w-20">
+              <img src="calidad.png" alt="Calidad" class="h-10 w-10">
+            </div>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-gray-800">Calidad</h3>
+            <p class="text-gray-600 text-sm">Comprometidos con la excelencia</p>
+          </div>
+        </div>
+        <!-- Bloque 4 -->
+        <div class="flex items-start space-x-4">
+          <div class="flex-shrink-0">
+            <div class="flex items-center justify-center border-4 border-blue-500 rounded-full h-20 w-20">
+              <img src="conocimiento.png" alt="Conocimiento" class="h-10 w-10">
+            </div>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-gray-800">Conocimiento</h3>
+            <p class="text-gray-600 text-sm">Expertos a tu servicio</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-16 bg-blue-100">
+  <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 text-center">
+    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-10">NUESTROS SERVICIOS</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <!-- Servicio 1 -->
+      <div class="flex flex-col items-center space-y-4">
+        <div class="flex items-center justify-center bg-white border-4 border-blue-500 rounded-full h-24 w-24">
+          <img src="software.png" alt="Desarrollo de Software" class="h-12 w-12">
+        </div>
+        <h3 class="text-lg font-semibold text-gray-800">DESARROLLO DE SOFTWARE</h3>
+      </div>
+      <!-- Servicio 2 -->
+      <div class="flex flex-col items-center space-y-4">
+        <div class="flex items-center justify-center bg-white border-4 border-blue-500 rounded-full h-24 w-24">
+          <img src="gestion-de-proyectos.png" alt="Asistencia en Proyectos" class="h-12 w-12">
+        </div>
+        <h3 class="text-lg font-semibold text-gray-800">ASISTENCIA EN PROYECTOS</h3>
+      </div>
+      <!-- Servicio 3 -->
+      <div class="flex flex-col items-center space-y-4">
+        <div class="flex items-center justify-center bg-white border-4 border-blue-500 rounded-full h-24 w-24">
+          <img src="agente.png" alt="Call Center 24/7" class="h-12 w-12">
+        </div>
+        <h3 class="text-lg font-semibold text-gray-800">CALL CENTER 24/7</h3>
+      </div>
+      <!-- Servicio 4 -->
+      <div class="flex flex-col items-center space-y-4">
+        <div class="flex items-center justify-center bg-white border-4 border-blue-500 rounded-full h-24 w-24">
+          <img src="justicia.png" alt="Cobranzas Judiciales" class="h-12 w-12">
+        </div>
+        <h3 class="text-lg font-semibold text-gray-800">COBRANZAS JUDICIALES</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="py-16 bg-white">
+  <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 text-center">
+    <h2 class="text-3xl md:text-4xl font-bold text-blue-700 mb-10">CERTIFICACIONES</h2>
+    <div class="flex flex-wrap justify-center gap-10">
+      <!-- Certificación 1 -->
+      <div class="flex flex-col items-center">
+        <img src="iso.png" alt="ISO 9001:2015" class="h-20 w-auto">
+        <p class="text-gray-700 text-sm mt-2">ISO 9001:2015</p>
+      </div>
+      <!-- Certificación 2 -->
+      <div class="flex flex-col items-center">
+        <img src="iso.png" alt="ISO 9001:2015" class="h-20 w-auto">
+        <p class="text-gray-700 text-sm mt-2">ISO 9001:2015</p>
+      </div>
+      <!-- Certificación 3 -->
+      <div class="flex flex-col items-center">
+        <img src="iso.png" alt="ISO 9001:2015" class="h-20 w-auto">
+        <p class="text-gray-700 text-sm mt-2">ISO 9001:2015</p>
+      </div>
+      <!-- Certificación 4 -->
+      <div class="flex flex-col items-center">
+        <img src="iso.png" alt="ISO 9001:2015" class="h-20 w-auto">
+        <p class="text-gray-700 text-sm mt-2">ISO 9001:2015</p>
+      </div>
+    </div>
+  </div>
+</section>
+
