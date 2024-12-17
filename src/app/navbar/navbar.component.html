@@ -1,4 +1,4 @@
-<nav class="bg-white shadow-md fixed w-full z-10">
+<nav class="bg-white shadow-md fixed w-full z-10 top-0 left-0 right-0">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between items-center h-16">
       <!-- Logo -->
@@ -7,15 +7,16 @@
       </a>
       <!-- Menú principal -->
       <div class="hidden md:flex space-x-6">
-        <a href="#" class="text-gray-700 hover:text-blue-600">Inicio</a>
-        <a href="#" class="text-gray-700 hover:text-blue-600">Quiénes Somos</a>
-        <a href="#" class="text-gray-700 hover:text-blue-600">Contáctanos</a>
-        <a href="#" class="text-gray-700 hover:text-blue-600">Nuestros Servicios</a>
+        <a [routerLink]="['/inicio']" class="text-gray-700 hover:text-blue-600 transition duration-200">Inicio</a>
+        <a [routerLink]="['/quienes-somos']" class="text-gray-700 hover:text-blue-600 transition duration-200">Quiénes Somos</a>
+        <a [routerLink]="['/contacto-dace']" class="text-gray-700 hover:text-blue-600 transition duration-200">Contáctanos</a>
+        <a [routerLink]="['/servicios-dace']" class="text-gray-700 hover:text-blue-600 transition duration-200">Nuestros Servicios</a>
       </div>
       <!-- Botón del menú hamburguesa -->
       <button
         class="md:hidden text-gray-700 focus:outline-none"
         (click)="toggleMenu()"
+        aria-label="Abrir menú"
       >
         <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path
@@ -31,11 +32,11 @@
   <!-- Menú desplegable -->
   <div
     *ngIf="menuOpen"
-    class="md:hidden bg-white shadow-lg border-t border-gray-200"
+    class="md:hidden bg-white shadow-lg border-t border-gray-200 transition-all duration-300 ease-in-out transform"
   >
-    <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Inicio</a>
-    <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Quiénes Somos</a>
-    <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Contáctanos</a>
-    <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Nuestros Servicios</a>
+    <a [routerLink]="['/inicio']" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 transition duration-200">Inicio</a>
+    <a [routerLink]="['/quienes-somos']" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 transition duration-200">Quiénes Somos</a>
+    <a [routerLink]="['/contacto-dace']" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 transition duration-200">Contáctanos</a>
+    <a [routerLink]="['/servicios-dace']" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 transition duration-200">Nuestros Servicios</a>
   </div>
 </nav>

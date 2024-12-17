@@ -6,6 +6,7 @@ import { QuienesSomosComponent } from './quienes-somos/quienes-somos.component';
 
 export const routes: Routes = [
     { path: '', component: InicioComponent },
+    { path: 'inicio', component: InicioComponent},
     { path: 'contacto-dace', component: ContactoDaceComponent },
     { path: 'servicios-dace', component : ServiciosDaceComponent },
     {path: 'quienes-somos', component: QuienesSomosComponent}
