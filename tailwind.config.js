@@ -4,7 +4,9 @@ module.exports = {
     theme: {
         extend: {
             animation: {
-                'fade-in': 'fadeIn 2s ease-in-out',
+                'fade-in': 'fadeIn 1s ease-in-out',
+                'fade-in-2': 'fadeIn 2s ease-in-out',
+                'fade-in-3': 'fadeIn 3s ease-in-out',
                 'slide-in': 'slideIn 1.5s ease-in-out',
                 'bounce': 'bounce 2s infinite',
             },

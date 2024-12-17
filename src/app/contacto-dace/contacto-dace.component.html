@@ -1,28 +1,30 @@
-<body>
-    <section class="flex flex-col lg:flex-row text-gray-600 body-font relative ">
-        <div class="container px-5 py-24 mx-auto flex flex-col lg:flex-row lg:space-x-4 ">
-            <!-- Imagen -->
-            <div class="w-full lg:w-1/2">
-                <img class="h-auto max-w-full" src="/model1-fixed.png" alt="image description">
-            </div>
-            <!-- Formulario de contacto -->
-            <div class="bg-azul-container lg:w-[550px] lg:h-[700px] md:w-2/3 rounded-lg p-8 flex flex-col md:ml-auto w-full h-4/6 mt-10 lg:mt-0 relative z-10 shadow-md">
-                <img src="/logo-white.png" class="object-contain block w-64 mb-4">
-                <h2 class="text-white text-3xl mb-0 font-bold title-font">CONTACTO</h2>
-                <p class="leading-relaxed mb-5 text-xl text-white">Puedes contactarnos:</p>
-                <!-- Asunto -->
-                <div class="relative mb-4">
-                    <label for="email" class="font-bold leading-7 text-lg text-white">Asunto:</label>
-                    <input type="email" id="email" name="email" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
-                </div>
-                <!-- Mensaje -->
-                <div class="relative mb-4">
-                    <label for="message" class="font-bold leading-7 text-lg text-white">Mensaje:</label>
-                    <textarea id="message" name="message" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 h-64 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
-                </div>
-                <!-- Botón Enviar -->
-                <button class="bg-gray-container font-bold text-white border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">ENVIAR</button>
-            </div>
+<section class="flex flex-col lg:flex-row text-gray-600 body-font relative ">
+    <div class="container px-5 py-24 mx-auto flex flex-col lg:space-x-4 md:mt-4 md:p-0 lg:flex-row lg:mt-12 lg:p-0 lg:mt">
+        <!-- Imagen -->
+        <div class="h-screen w-full lg:w-1/2 animate-fade-in mx-auto ml-8">
+            <img class="h-full w-auto object-cover " src="/model1-fixed.png" alt="image description">
         </div>
-    </section>
-</body>
+        <!-- Formulario de contacto -->
+        <div class="bg-azul-container lg:mt-16 lg:w-1/2 rounded-lg p-8 flex flex-col md:mb-6 md:ml-auto relative z-4 shadow-md animate-fade-in md:border-4 md:border-blue-500 lg:border-4 lg:border-red-500 flex-grow">
+            <img src="/DACElogow-01.png" class="object-contain block w-64 mb-4">
+            <h2 class="text-white text-3xl mb-0 font-bold title-font">CONTACTO</h2>
+            <p class="leading-relaxed mb-5 text-xl text-white">Puedes contactarnos:</p>
+            <!-- Asunto -->
+            <div class="relative mb-4">
+                <label for="email" class="font-bold leading-7 text-lg text-white">Asunto:</label>
+                <input type="email" id="email" name="email" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+            </div>
+            <!-- Mensaje -->
+            <div class="relative mb-4">
+                <label for="message" class="font-bold leading-7 text-lg text-white">Mensaje:</label>
+                <textarea id="message" name="message" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 
+                                                                py-1 px-3 resize-none  
+                                                                min-h-[190px] max-h-[380px] 
+                                                                leading-6 transition-colors
+                                                                duration-200 ease-in-out"></textarea>
+            </div>
+            <!-- Botón Enviar -->
+            <button class="bg-azul-container-2 font-bold text-white border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">ENVIAR</button>
+        </div>
+    </div>
+</section>
